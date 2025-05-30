@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import CamoCard from '../components/component-camocard/camocard';
-import multicamImg from '../assets/camos/MULTICAM.png';
-import m81WoodlandImg from '../assets/camos/M81-WOODLAND.png';
-import mtpImg from '../assets/camos/MTP.png';
-import emrImg from '../assets/camos/EMR.png';
-import ucpImg from '../assets/camos/UCP.png';
-import ocpImg from '../assets/camos/OCP.png';
-import marpatImg from '../assets/camos/MARPAT.png';
-import cceImg from '../assets/camos/CCE.png';
-import dcuImg from '../assets/camos/DCU-3-COLORES.png';
-import mm14Img from '../assets/camos/MM-14.png';
 
 // Lista de países únicos para el filtro
 const allCamos = [
   {
-    image: multicamImg,
+    image: "src/assets/camos/MULTICAM.png",
     name: "MULTICAM",
     year: 2002, // <-- Agrega el año de creación
     description: "Diseñado para su uso en una amplia gama de entornos y condiciones, desarrollado y producido por la empresa estadounidense Crye Precision. El patrón ha sido ampliamente adoptado a nivel mundial. Variantes de este, algunas no licenciadas, están en uso con ejércitos de todo el mundo, particularmente con unidades de fuerzas especiales y operaciones especiales.",
@@ -93,7 +83,7 @@ const allCamos = [
     ]
   },
   {
-    image: m81WoodlandImg,
+    image: "src/assets/camos/M81-WOODLAND.png",
     name: "M81 WOODLAND",
     year: 1981, // <-- Agrega el año de creación
     description: "Un patrón de camuflaje clásico que se ha utilizado durante décadas, efectivo en áreas boscosas.",
@@ -154,7 +144,7 @@ const allCamos = [
     ]
   },
   {
-    image: mtpImg,
+    image: "src/assets/camos/MTP.png",
     name: "MTP (PATRÓN MULTITERRENO)",
     year: 2010, // <-- Agrega el año de creación
     description: "Un patrón de camuflaje moderno utilizado por las Fuerzas Armadas Británicas, diseñado para múltiples terrenos. Se adapta bien a diversos entornos, desde desiertos hasta bosques. Su combinación única de colores ayuda a los soldados a permanecer ocultos en paisajes variados.",
@@ -173,7 +163,7 @@ const allCamos = [
     former: []
   },
   {
-    image: emrImg,
+    image: "src/assets/camos/EMR.png",
     name: "EMR (PATRÓN MULTITERRENO RUSO)",
     year: 2008,
     description: "Un patrón de camuflaje moderno utilizado por las Fuerzas Armadas Rusas, diseñado para múltiples terrenos. Se adapta bien a diversos entornos, desde desiertos hasta bosques. Su combinación única de colores ayuda a los soldados a permanecer ocultos en paisajes variados.",
@@ -190,7 +180,7 @@ const allCamos = [
     ]
   },
   {
-    image: ucpImg,
+    image: "src/assets/camos/UCP.png",
     name: "UCP (PATRÓN DE CAMUFLAJE UNIVERSAL)",
     year: 2005,
     description: "",
@@ -225,7 +215,7 @@ const allCamos = [
     former: []
   },
   {
-    image: ocpImg,
+    image: "src/assets/camos/OCP.png",
     name: "OCP (PATRÓN DE CAMUFLAJE OPTIMIZADO)",
     year: 2009,
     description: "Un patrón de camuflaje moderno utilizado por las Fuerzas Armadas de los Estados Unidos, diseñado para múltiples terrenos. Se adapta bien a diversos entornos, desde desiertos hasta bosques. Su combinación única de colores ayuda a los soldados a permanecer ocultos en paisajes variados.",
@@ -241,7 +231,7 @@ const allCamos = [
     former: []
   },
   {
-    image: marpatImg,
+    image: "src/assets/camos/MARPAT.png",
     name: "MARPAT (PATRÓN DE CAMUFLAJE DE MARINES)",
     year: 2000,
     description: "Un patrón de camuflaje digital utilizado por el Cuerpo de Marines de los Estados Unidos, diseñado para múltiples terrenos. Se adapta bien a diversos entornos, desde bosques hasta áreas urbanas. Su diseño pixelado ayuda a romper la silueta humana y mejorar la ocultación.",
@@ -275,7 +265,7 @@ const allCamos = [
     former: []
   },
   {
-    image: cceImg,
+    image: "src/assets/camos/CCE.png",
     name: "CCE (CAMOUFLAGE CENTRAL EUROPEO)",
     year: 1991,
     description: "Un patrón de camuflaje utilizado por las Fuerzas Armadas Francesas, diseñado para múltiples terrenos. Se adapta bien a diversos entornos, desde bosques hasta áreas urbanas. Su combinación de colores ayuda a los soldados a permanecer ocultos en paisajes variados.",
@@ -296,7 +286,7 @@ const allCamos = [
     former: []
   },
   {
-    image: dcuImg,
+    image: "src/assets/camos/DCU-3-COLORES.png",
     name: "DCU (DESERT CAMOUFLAGE UNIFORM)",
     year: 1989,
     description: "Un patrón de camuflaje utilizado por las Fuerzas Armadas de los Estados Unidos, diseñado para entornos desérticos. Se caracteriza por su combinación de colores arena y marrón, lo que ayuda a los soldados a mezclarse con el paisaje árido.",
@@ -320,7 +310,7 @@ const allCamos = [
   ]
   },
   {
-    image: mm14Img,
+    image: "src/assets/camos/MM-14.png",
     name: "MM-14",
     year: 2014,
     description: "Un patrón de camuflaje utilizado por las Fuerzas Armadas de Ucrania, diseñado para entornos urbanos y rurales. Se caracteriza por su combinación de colores que ayudan a los soldados a mezclarse con el paisaje ucraniano.",
