@@ -1,0 +1,107 @@
+.camo-card{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 32px;
+    margin: 16px;
+    background: var(--gry2);
+    color: var(--wht);
+    width: 80%;
+
+}
+
+.camo-card h2{
+    color: var(--yel);
+}
+
+.camo-card p{
+    width: 100%;
+}
+
+.camo-image{
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 24px;
+    background-color: var(--blk);
+}
+
+.camo-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+.user-flag-div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 4px;
+    width: auto;
+    max-width: 50%;
+    background-color: var(--gry);
+    border-radius: 10px;
+    padding: 0px 15px 15px 15px;
+    display: inline-block
+}
+
+.user-flag-div p{
+    margin: 15px 0px;
+    color: var(--wht);
+    filter: opacity(0.3);
+}
+
+.flag{
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.toggle-flags-btn {
+    background-color: var(--yel);
+    font-weight: var(--medium);
+    color: var(--blk);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--texto-1);
+}
+
+.flag-hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.flag-tooltip {
+  visibility: hidden;
+  font-family: var(--texto);
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 2px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%; /* arriba de la bandera */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: var(--texto-1);
+  white-space: nowrap;
+}
+
+.flag-hover-container:hover .flag-tooltip {
+  visibility: visible;
+  opacity: 1;
+}

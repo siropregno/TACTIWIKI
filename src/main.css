@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap');:root {
+    --titulo: "Exo 2", sans-serif;
+    --texto: "Exo 2", sans-serif;
+
+    --wht: #f2f2f2;
+    --blk: #030303;
+    --gry: #151515;
+    --gry2: #1a1a1a;
+    --yel: #ecc517;
+    --null: #9999AA;
+
+    --titulo-1: 35px;
+    --titulo-2: 22px;
+    --subtitulo-1: 25px;
+    --subtitulo-2: 22px;
+    --subtitulo-3: 20px;
+    --texto-1: 16px;
+
+    --thin: 100;
+    --extralight: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+    --black: 900;
+}
+
+body {
+    margin: 0;
+    background-color: var(--gry);
+}
+
+h1 {
+    font-family: var(--titulo);
+    font-size: var(--titulo-1);
+    margin-block: 0;
+}
+h2 {
+    font-family: var(--titulo);
+    font-size: var(--titulo-2);
+    margin-block: 0;
+    font-weight: var(--bold);
+}
+
+p {
+    font-family: var(--texto);
+    font-size: var(--texto-1);
+    margin-block: 1em;
+    margin-block: 1lh;
+    font-weight: var(--regular);
+}
+
+a {
+    font-family: var(--texto);
+    font-size: var(--texto-1);
+    font-weight: var(--semibold);
+}
+
+li {
+    font-family: var(--texto);
+    font-size: var(--texto-1);
+}
