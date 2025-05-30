@@ -13,10 +13,10 @@ function App() {
       < Navbar/>
       <main>
         <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/camos" element={<Camos />} />
-          <Route path="/uniforms" element={<Uniforms />} />
-          <Route path="/vests" element={<Vests />} />
+          <Route path="/TAKTIWIKI/" element={<Inicio />} />
+          <Route path="/TAKTIWIKI/camos" element={<Camos />} />
+          <Route path="/TAKTIWIKI/uniforms" element={<Uniforms />} />
+          <Route path="/TAKTIWIKI/vests" element={<Vests />} />
         </Routes>
       </main>
       < Footer/>
