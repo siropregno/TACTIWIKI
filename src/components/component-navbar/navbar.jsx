@@ -13,10 +13,10 @@ const Navbar = () => {
             </NavLink>
           </div>
           <ul>
-            <li><NavLink to="/">Inicio</NavLink></li>
-            <li><NavLink to="/camos">Camuflajes</NavLink></li>
-            <li><NavLink to="/uniforms">Uniformes</NavLink></li>
-            <li><NavLink to="/vests">Chalecos</NavLink></li>
+            <li><NavLink to="/TACTIWIKI/">Inicio</NavLink></li>
+            <li><NavLink to="/TACTIWIKI/camos">Camuflajes</NavLink></li>
+            <li><NavLink to="/TACTIWIKI/uniforms">Uniformes</NavLink></li>
+            <li><NavLink to="/TACTIWIKI/vests">Chalecos</NavLink></li>
           </ul>
         </div>
       </nav>
