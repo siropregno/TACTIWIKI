@@ -124,4 +124,19 @@
     width: 100vw;
     display: block;
   }
+
+  /* Show hamburger only on mobile */
+  .nav-hamburger {
+    display: block !important;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 20;
+    width: 30px;
+    height: 30px;
+  }
+  .nav-hamburger span {
+    background: var(--wht);
+    transition: all 0.2s;
+  }
 }
