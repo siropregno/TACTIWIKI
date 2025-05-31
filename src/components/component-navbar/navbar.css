@@ -76,7 +76,7 @@
 }
 
 /* Responsive styles for cellphones */
-@media (max-width: 600px) {
+@media (max-width: 764px) {
   .nav-container {
     height: 56px;
     min-height: 56px;
@@ -110,29 +110,36 @@
 
   .nav-content ul.show {
     display: flex;
+
   }
 
   .nav-content ul li {
-    margin: 12px 0;
-    text-align: center;
+    margin: 12px 30px 10px 0px;
+    text-align: end;
   }
 
   .nav-content ul li a {
     height: auto;
     font-size: 18px;
     padding: 12px 0;
-    width: 100vw;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
   }
+
+  .nav-content ul li a.active {
+    border-bottom: 0px solid var(--yel);
+    transition: color 0.2s;
+}
 
   /* Show hamburger only on mobile */
   .nav-hamburger {
     display: block !important;
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 10px;
     z-index: 20;
-    width: 30px;
     height: 30px;
   }
   .nav-hamburger span {

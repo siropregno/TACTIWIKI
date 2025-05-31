@@ -619,12 +619,13 @@ const Camos = () => {
         <title>TACTIWIKI - Camuflajes</title>
       </Helmet>
       <section style={{ marginTop: '100px',display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h1 style={{ color: 'var(--yel)' }}>Camuflajes</h1>
-        <p style={{ color: 'var(--wht)', maxWidth: '800px', textAlign: 'center' }}>
-          Los camuflajes son patrones de diseño utilizados en uniformes militares y tácticos para ayudar a los soldados a mezclarse con su entorno. Estos patrones están diseñados para romper la silueta humana y reducir la visibilidad en diferentes terrenos, como bosques, desiertos o áreas urbanas.
-        </p>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',backgroundColor: 'rgba(0, 0, 0, 0.2)', padding: '32px', borderRadius: '8px', width: '80%'}}>
+          <h1 style={{ color: 'var(--yel)' }}>Camuflajes</h1>
+          <p style={{ color: 'var(--wht)', fontFamily: 'var(--texto)', maxWidth: '800px', width: '80%', textAlign: 'center' }}>
+            Explora los camuflajes utilizados por las fuerzas armadas de todo el mundo. Filtra por país, terreno y ordena por popularidad o año de creación.
+          </p>
         {/* Barra de búsqueda */}
-        <div style={{ margin: '12px 0', width: '100%', maxWidth: 400, display: 'flex', justifyContent: 'center' }}>
+        <div style={{ margin: '20px 0px 0px 0px', width: '100%', maxWidth: 400, display: 'flex', justifyContent: 'center' }}>
           <input
             type="text"
             placeholder="Buscar camuflaje..."
@@ -664,7 +665,7 @@ const Camos = () => {
             <select
               value={selectedCountry}
               onChange={e => setSelectedCountry(e.target.value)}
-              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%' }}
+              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%', marginTop: '10px' }}
             >
               <option value="">Todos</option>
               {allCountries.map(country => (
@@ -679,7 +680,7 @@ const Camos = () => {
             <select
               value={selectedTerrain}
               onChange={e => setSelectedTerrain(e.target.value)}
-              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%' }}
+              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%', marginTop: '10px' }}
             >
               <option value="">Todos</option>
               {allTerrains.map(terrain => (
@@ -688,13 +689,13 @@ const Camos = () => {
             </select>
           </div>
           <div style={{ minWidth: 180, flex: 1 }}>
-            <label style={{ color: 'var(--wht)', fontFamily: 'var(--texto)', marginRight: 8 }}>
+            <label style={{ color: 'var(--wht)', fontFamily: 'var(--texto)', marginRight: 8}}>
               Ordenar por:&nbsp;
             </label>
             <select
               value={order}
               onChange={e => setOrder(e.target.value)}
-              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%' }}
+              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%', marginTop: '10px' }}
             >
               <option value="popularity-desc">Más popular primero</option>
               <option value="popularity-asc">Menos popular primero</option>
@@ -702,6 +703,7 @@ const Camos = () => {
               <option value="year-asc">Más antiguo primero</option>
             </select>
           </div>
+        </div>
         </div>
         {sortedCamos.map(camo => (
           <CamoCard

@@ -16,10 +16,18 @@ const Navbar = () => {
             </NavLink>
           </div>
           <ul className={menuOpen ? 'show' : ''}>
-            <li><NavLink to="/">Inicio</NavLink></li>
-            <li><NavLink to="/camos">Camuflajes</NavLink></li>
-            <li><NavLink to="/uniforms">Uniformes</NavLink></li>
-            <li><NavLink to="/vests">Chalecos</NavLink></li>
+            <li>
+              <NavLink to="/" onClick={() => setMenuOpen(false)}>Inicio</NavLink>
+            </li>
+            <li>
+              <NavLink to="/camos" onClick={() => setMenuOpen(false)}>Camuflajes</NavLink>
+            </li>
+            <li>
+              <NavLink to="/uniforms" onClick={() => setMenuOpen(false)}>Uniformes</NavLink>
+            </li>
+            <li>
+              <NavLink to="/vests" onClick={() => setMenuOpen(false)}>Chalecos</NavLink>
+            </li>
           </ul>
           <button
             className="nav-hamburger"
