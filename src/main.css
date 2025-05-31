@@ -30,6 +30,10 @@
 body {
     margin: 0;
     background-color: var(--gry);
+    overflow-x: hidden;
+    background-image: url('./assets/images/background.png');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {

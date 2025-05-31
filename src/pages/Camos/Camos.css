@@ -1,0 +1,90 @@
+.camos-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(7, 7, 7, 0.6);
+  padding: 32px;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.camos-title {
+  color: var(--yel);
+}
+
+.camos-description {
+  color: var(--wht);
+  font-family: var(--texto);
+  max-width: 800px;
+  width: 80%;
+  text-align: center;
+}
+
+.camos-search-bar {
+  margin: 20px 0 0 0;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.camos-search-input {
+  width: 80%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--gry2);
+  font-size: 16px;
+  background: var(--gry2);
+  color: var(--wht);
+  font-family: var(--texto);
+}
+
+.camo-filter-bar {
+  margin: 20px 0;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--gry2);
+  padding: 16px 32px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.camo-filter-group {
+  min-width: 140px;
+  flex: 1;
+}
+
+.camo-filter-label {
+  color: var(--wht);
+  font-family: var(--texto);
+  margin-right: 8px;
+}
+
+.camo-filter-select {
+  background: var(--yel);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0px solid var(--wht);
+  width: 100%;
+  margin-top: 10px;
+}
+
+.camo-filter-group.order {
+  min-width: 180px;
+}
+
+@media (max-width: 600px) {
+  .camos-container {
+    padding: 16px;  
+  }
+}
