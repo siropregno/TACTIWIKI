@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/component-navbar/navbar';
 import Footer from './components/component-footer/footer'
 import Inicio from './pages/Inicio';
@@ -9,7 +9,7 @@ import Vests from './pages/Vests';
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
       <main>
         <Routes>
@@ -20,7 +20,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </Router>
   );
 }
 

@@ -10,9 +10,15 @@ import emrImg from '../assets/camos/EMR.png';
 import ucpImg from '../assets/camos/UCP.png';
 import ocpImg from '../assets/camos/OCP.png';
 import marpatImg from '../assets/camos/MARPAT.png';
+import marpatdImg from '../assets/camos/MARPAT-DESERT.png';
+import dpmImg from '../assets/camos/DPM.png';
+import atacsImg from '../assets/camos/ATACS.png';
 import cceImg from '../assets/camos/CCE.png';
 import dcuImg from '../assets/camos/DCU-3-COLORES.png';
+import dcu2Img from '../assets/camos/DCU-6-COLORES.png';
 import mm14Img from '../assets/camos/MM-14.png';
+import aor1Img from '../assets/camos/AOR1.png';
+import aor2Img from '../assets/camos/AOR2.png';
 import afFlag from '../assets/flags/af.svg';
 import aeFlag from '../assets/flags/ae.svg';
 import alFlag from '../assets/flags/al.svg';
@@ -42,6 +48,7 @@ import ciFlag from '../assets/flags/ci.svg';
 import clFlag from '../assets/flags/cl.svg';
 import cnFlag from '../assets/flags/cn.svg';
 import coFlag from '../assets/flags/co.svg';
+import crFlag from '../assets/flags/cr.svg';
 import cvFlag from '../assets/flags/cv.svg';
 import cyFlag from '../assets/flags/cy.svg';
 import cdFlag from '../assets/flags/cd.svg';
@@ -96,6 +103,7 @@ import mmFlag from '../assets/flags/mm.svg';
 import mtFlag from '../assets/flags/mt.svg';
 import myFlag from '../assets/flags/my.svg';
 import mxFlag from '../assets/flags/mx.svg';
+import naFlag from '../assets/flags/na.svg';
 import ngFlag from '../assets/flags/ng.svg';
 import nlFlag from '../assets/flags/nl.svg';
 import noFlag from '../assets/flags/no.svg';
@@ -133,6 +141,13 @@ import yeFlag from '../assets/flags/ye.svg';
 import zaFlag from '../assets/flags/za.svg';
 import zmFlag from '../assets/flags/zm.svg';
 import zwFlag from '../assets/flags/zw.svg';
+import jmFlag from '../assets/flags/jm.svg';
+import pgFlag from '../assets/flags/pg.svg';
+import lsFlag from '../assets/flags/ls.svg';
+import mwFlag from '../assets/flags/mw.svg';
+import vuFlag from '../assets/flags/vu.svg';
+import bnFlag from '../assets/flags/bn.svg';
+import slFlag from '../assets/flags/sl.svg';
 
 
 // Lista de países únicos para el filtro
@@ -231,7 +246,6 @@ const allCamos = [
       { country: 'Bután', flag: btFlag },
       { country: 'Bolivia', flag: boFlag },
       { country: 'Bosnia y Herzegovina', flag: baFlag },
-      { country: 'República Srpska', flag: baFlag },
       { country: 'Camboya', flag: khFlag },
       { country: 'Chad', flag: tdFlag },
       { country: 'Chile', flag: clFlag },
@@ -271,8 +285,23 @@ const allCamos = [
       { country: 'Tonga', flag: toFlag },
       { country: 'Turquía', flag: trFlag },
       { country: 'Ucrania', flag: uaFlag },
-      { country: 'Estados Unidos', flag: usFlag },
+      { country: 'Estados Unidos (MARSOC)', flag: usFlag },
       { country: 'Vietnam', flag: vnFlag }
+    ],
+    former: [
+      { country: 'República Islámica de Afganistán', flag: afFlag },
+      { country: 'Australia', flag: auFlag },
+      { country: 'Canadá', flag: caFlag },
+      { country: 'Colombia', flag: coFlag },
+      { country: 'Costa Rica', flag: crFlag },
+      { country: 'Alemania', flag: deFlag },
+      { country: 'Georgia', flag: geFlag },
+      { country: 'Irak', flag: iqFlag },
+      { country: 'Letonia', flag: lvFlag },
+      { country: 'Líbano', flag: lbFlag },
+      { country: 'Países Bajos', flag: nlFlag },
+      { country: 'Nigeria', flag: ngFlag },
+      { country: 'Siria (Baazista)', flag: syFlag }
     ]
   },
   {
@@ -402,7 +431,7 @@ const allCamos = [
     year: 1991,
     description: "Un patrón de camuflaje utilizado por las Fuerzas Armadas Francesas, diseñado para múltiples terrenos. Se adapta bien a diversos entornos, desde bosques hasta áreas urbanas. Su combinación de colores ayuda a los soldados a permanecer ocultos en paisajes variados.",
     developer: 'Fuerzas Armadas Francesas',
-    terrain: ['urbano', 'desierto', 'bosque', 'montaña'],
+    terrain: ['urbano', 'bosque', 'montaña'],
     users: [
     { country: 'Austria', flag: atFlag },
     { country: 'Cabo Verde', flag: cvFlag },
@@ -449,9 +478,71 @@ const allCamos = [
     developer: 'Ejército de Ucrania',
     terrain: ['urbano', 'rural'],
     users: [
-      { country: 'Ucrania', flag: uaFlag }
+      { country: 'Ucrania', flag: uaFlag },
     ],
     former: []
+  },
+  {
+    image: dpmImg,
+    name: "DPM (DISRUPTIVE PATTERN MATERIAL)",
+    year: 1960,
+    description: "Un patrón de camuflaje utilizado por las Fuerzas Armadas del Reino Unido, diseñado para entornos boscosos y rurales. Se caracteriza por su combinación de colores que ayudan a los soldados a mezclarse con el paisaje británico.",
+    developer: 'Ejército Británico',
+    terrain: ['bosque', 'rural'],
+    users: [
+      { country: 'Botsuana', flag: bwFlag },
+      { country: 'Bulgaria', flag: bgFlag },
+      { country: 'Camboya', flag: khFlag },
+      { country: 'Georgia', flag: geFlag },
+      { country: 'Grecia', flag: grFlag },
+      { country: 'Hong Kong', flag: hkFlag },
+      { country: 'Indonesia', flag: idFlag },
+      { country: 'India', flag: inFlag },
+      { country: 'Irán', flag: irFlag },
+      { country: 'Jamaica', flag: jmFlag },
+      { country: 'Kenia', flag: keFlag },
+      { country: 'Lesoto', flag: lsFlag },
+      { country: 'Malaui', flag: mwFlag },
+      { country: 'Corea del Norte', flag: kpFlag },
+      { country: 'Omán', flag: omFlag },
+      { country: 'Papúa Nueva Guinea', flag: pgFlag },
+      { country: 'Filipinas', flag: phFlag },
+      { country: 'Rusia', flag: ruFlag },
+      { country: 'Serbia', flag: rsFlag },
+      { country: 'Sri Lanka', flag: lkFlag },
+      { country: 'Ucrania', flag: uaFlag },
+      { country: 'Reino Unido', flag: gbFlag },
+      { country: 'Vanuatu', flag: vuFlag }
+    ],
+    former: [
+      { country: 'Argentina', flag: arFlag },
+      { country: 'Australia', flag: auFlag },
+      { country: 'Baréin', flag: bhFlag },
+      { country: 'Bangladés', flag: bdFlag },
+      { country: 'Brunéi', flag: bnFlag },
+      { country: 'Canadá', flag: caFlag },
+      { country: 'China', flag: cnFlag },
+      { country: 'Croacia', flag: hrFlag },
+      { country: 'Irak', flag: iqFlag },
+      { country: 'Irlanda', flag: ieFlag },
+      { country: 'Kuwait', flag: kwFlag },
+      { country: 'Malasia', flag: myFlag },
+      { country: 'Países Bajos', flag: nlFlag },
+      { country: 'Nueva Zelanda', flag: nzFlag },
+      { country: 'Pakistán', flag: pkFlag },
+      { country: 'Filipinas (Guardia Costera)', flag: phFlag },
+      { country: 'Portugal', flag: ptFlag },
+      { country: 'Rumanía', flag: roFlag },
+      { country: 'Arabia Saudita', flag: saFlag },
+      { country: 'Sierra Leona', flag: slFlag },
+      { country: 'Sudáfrica', flag: zaFlag },
+      { country: 'Eslovenia', flag: siFlag },
+      { country: 'Siria', flag: syFlag },
+      { country: 'Tailandia', flag: thFlag },
+      { country: 'Hong Kong', flag: hkFlag },
+      { country: 'Uzbekistán', flag: uzFlag },
+      { country: 'Yemen', flag: yeFlag }
+    ]
   }
 ];
 
@@ -517,7 +608,7 @@ const Camos = () => {
         <div style={{ margin: '20px 0', display: 'flex', gap: '16px', flexWrap: 'wrap', background: 'var(--gry2)', padding: '16px 32px', borderRadius: '8px' }}>
           <div>
             <label style={{ color: 'var(--wht)', fontFamily: 'var(--texto)', marginRight: 8 }}>
-              País:&nbsp;
+              Usuario:&nbsp;
             </label>
             <select
               value={selectedCountry}
