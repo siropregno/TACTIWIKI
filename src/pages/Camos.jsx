@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import CamoCard from '../components/component-camocard/camocard';
@@ -11,6 +13,127 @@ import marpatImg from '../assets/camos/MARPAT.png';
 import cceImg from '../assets/camos/CCE.png';
 import dcuImg from '../assets/camos/DCU-3-COLORES.png';
 import mm14Img from '../assets/camos/MM-14.png';
+import afFlag from '../assets/flags/af.svg';
+import aeFlag from '../assets/flags/ae.svg';
+import alFlag from '../assets/flags/al.svg';
+import amFlag from '../assets/flags/am.svg';
+import aoFlag from '../assets/flags/ao.svg';
+import arFlag from '../assets/flags/ar.svg';
+import atFlag from '../assets/flags/at.svg';
+import auFlag from '../assets/flags/au.svg';
+import azFlag from '../assets/flags/az.svg';
+import baFlag from '../assets/flags/ba.svg';
+import bdFlag from '../assets/flags/bd.svg';
+import beFlag from '../assets/flags/be.svg';
+import bgFlag from '../assets/flags/bg.svg';
+import bhFlag from '../assets/flags/bh.svg';
+import boFlag from '../assets/flags/bo.svg';
+import brFlag from '../assets/flags/br.svg';
+import bsFlag from '../assets/flags/bs.svg';
+import btFlag from '../assets/flags/bt.svg';
+import bwFlag from '../assets/flags/bw.svg';
+import byFlag from '../assets/flags/by.svg';
+import bzFlag from '../assets/flags/bz.svg';
+import caFlag from '../assets/flags/ca.svg';
+import cfFlag from '../assets/flags/cf.svg';
+import cgFlag from '../assets/flags/cg.svg';
+import chFlag from '../assets/flags/ch.svg';
+import ciFlag from '../assets/flags/ci.svg';
+import clFlag from '../assets/flags/cl.svg';
+import cnFlag from '../assets/flags/cn.svg';
+import coFlag from '../assets/flags/co.svg';
+import cvFlag from '../assets/flags/cv.svg';
+import cyFlag from '../assets/flags/cy.svg';
+import cdFlag from '../assets/flags/cd.svg';
+import deFlag from '../assets/flags/de.svg';
+import dkFlag from '../assets/flags/dk.svg';
+import ecFlag from '../assets/flags/ec.svg';
+import eeFlag from '../assets/flags/ee.svg';
+import egFlag from '../assets/flags/eg.svg';
+import esFlag from '../assets/flags/es.svg';
+import fiFlag from '../assets/flags/fi.svg';
+import fjFlag from '../assets/flags/fj.svg';
+import frFlag from '../assets/flags/fr.svg';
+import gbFlag from '../assets/flags/gb.svg';
+import geFlag from '../assets/flags/ge.svg';
+import gmFlag from '../assets/flags/gm.svg';
+import grFlag from '../assets/flags/gr.svg';
+import gtFlag from '../assets/flags/gt.svg';
+import hrFlag from '../assets/flags/hr.svg';
+import hkFlag from '../assets/flags/hk.svg';
+import hnFlag from '../assets/flags/hn.svg';
+import htFlag from '../assets/flags/ht.svg';
+import huFlag from '../assets/flags/hu.svg';
+import idFlag from '../assets/flags/id.svg';
+import ieFlag from '../assets/flags/ie.svg';
+import ilFlag from '../assets/flags/il.svg';
+import inFlag from '../assets/flags/in.svg';
+import iqFlag from '../assets/flags/iq.svg';
+import irFlag from '../assets/flags/ir.svg';
+import itFlag from '../assets/flags/it.svg';
+import joFlag from '../assets/flags/jo.svg';
+import keFlag from '../assets/flags/ke.svg';
+import kgFlag from '../assets/flags/kg.svg';
+import khFlag from '../assets/flags/kh.svg';
+import kmFlag from '../assets/flags/km.svg';
+import knFlag from '../assets/flags/kn.svg';
+import kpFlag from '../assets/flags/kp.svg';
+import krFlag from '../assets/flags/kr.svg';
+import kwFlag from '../assets/flags/kw.svg';
+import kzFlag from '../assets/flags/kz.svg';
+import lbFlag from '../assets/flags/lb.svg';
+import lcFlag from '../assets/flags/lc.svg';
+import lkFlag from '../assets/flags/lk.svg';
+import ltFlag from '../assets/flags/lt.svg';
+import luFlag from '../assets/flags/lu.svg';
+import lvFlag from '../assets/flags/lv.svg';
+import meFlag from '../assets/flags/me.svg';
+import mdFlag from '../assets/flags/md.svg';
+import mkFlag from '../assets/flags/mk.svg';
+import mlFlag from '../assets/flags/ml.svg';
+import mnFlag from '../assets/flags/mn.svg';
+import mmFlag from '../assets/flags/mm.svg';
+import mtFlag from '../assets/flags/mt.svg';
+import myFlag from '../assets/flags/my.svg';
+import mxFlag from '../assets/flags/mx.svg';
+import ngFlag from '../assets/flags/ng.svg';
+import nlFlag from '../assets/flags/nl.svg';
+import noFlag from '../assets/flags/no.svg';
+import nzFlag from '../assets/flags/nz.svg';
+import omFlag from '../assets/flags/om.svg';
+import peFlag from '../assets/flags/pe.svg';
+import phFlag from '../assets/flags/ph.svg';
+import pkFlag from '../assets/flags/pk.svg';
+import plFlag from '../assets/flags/pl.svg';
+import ptFlag from '../assets/flags/pt.svg';
+import pyFlag from '../assets/flags/py.svg';
+import qaFlag from '../assets/flags/qa.svg';
+import roFlag from '../assets/flags/ro.svg';
+import rsFlag from '../assets/flags/rs.svg';
+import ruFlag from '../assets/flags/ru.svg';
+import saFlag from '../assets/flags/sa.svg';
+import seFlag from '../assets/flags/se.svg';
+import sgFlag from '../assets/flags/sg.svg';
+import siFlag from '../assets/flags/si.svg';
+import skFlag from '../assets/flags/sk.svg';
+import soFlag from '../assets/flags/so.svg';
+import svFlag from '../assets/flags/sv.svg';
+import syFlag from '../assets/flags/sy.svg';
+import tdFlag from '../assets/flags/td.svg';
+import thFlag from '../assets/flags/th.svg';
+import tjFlag from '../assets/flags/tj.svg';
+import toFlag from '../assets/flags/to.svg';
+import trFlag from '../assets/flags/tr.svg';
+import tzFlag from '../assets/flags/tz.svg';
+import uaFlag from '../assets/flags/ua.svg';
+import usFlag from '../assets/flags/us.svg';
+import uzFlag from '../assets/flags/uz.svg';
+import vnFlag from '../assets/flags/vn.svg';
+import yeFlag from '../assets/flags/ye.svg';
+import zaFlag from '../assets/flags/za.svg';
+import zmFlag from '../assets/flags/zm.svg';
+import zwFlag from '../assets/flags/zw.svg';
+
 
 // Lista de países únicos para el filtro
 const allCamos = [
@@ -22,74 +145,74 @@ const allCamos = [
     developer: 'Crye Precision',
     terrain: ['bosque', 'desierto', 'urbano', 'montaña'],
     users: [
-      { country: 'Afganistán', flag: '/src/assets/flags/af.svg' },
-      { country: 'Albania', flag: '/src/assets/flags/al.svg' },
-      { country: 'Angola', flag: '/src/assets/flags/ao.svg' },
-      { country: 'Argentina', flag: '/src/assets/flags/ar.svg' },
-      { country: 'Australia', flag: '/src/assets/flags/au.svg' },
-      { country: 'Austria', flag: '/src/assets/flags/at.svg' },
-      { country: 'Baréin', flag: '/src/assets/flags/bh.svg' },
-      { country: 'Bangladés', flag: '/src/assets/flags/bd.svg' },
-      { country: 'Bélgica', flag: '/src/assets/flags/be.svg' },
-      { country: 'Botsuana', flag: '/src/assets/flags/bw.svg' },
-      { country: 'Bulgaria', flag: '/src/assets/flags/bg.svg' },
-      { country: 'Canadá', flag: '/src/assets/flags/ca.svg' },
-      { country: 'Chile', flag: '/src/assets/flags/cl.svg' },
-      { country: 'Colombia', flag: '/src/assets/flags/co.svg' },
-      { country: 'Dinamarca', flag: '/src/assets/flags/dk.svg' },
-      { country: 'Estonia', flag: '/src/assets/flags/ee.svg' },
-      { country: 'Fiyi', flag: '/src/assets/flags/fj.svg' },
-      { country: 'Francia', flag: '/src/assets/flags/fr.svg' },
-      { country: 'Georgia', flag: '/src/assets/flags/ge.svg' },
-      { country: 'Alemania', flag: '/src/assets/flags/de.svg' },
-      { country: 'Grecia', flag: '/src/assets/flags/gr.svg' },
-      { country: 'Hungría', flag: '/src/assets/flags/hu.svg' },
-      { country: 'Indonesia', flag: '/src/assets/flags/id.svg' },
-      { country: 'Irak', flag: '/src/assets/flags/iq.svg' },
-      { country: 'Irlanda', flag: '/src/assets/flags/ie.svg' },
-      { country: 'Italia', flag: '/src/assets/flags/it.svg' },
-      { country: 'Jordania', flag: '/src/assets/flags/jo.svg' },
-      { country: 'Kazajistán', flag: '/src/assets/flags/kz.svg' },
-      { country: 'Kenia', flag: '/src/assets/flags/ke.svg' },
-      { country: 'Kuwait', flag: '/src/assets/flags/kw.svg' },
-      { country: 'Letonia', flag: '/src/assets/flags/lv.svg' },
-      { country: 'Lituania', flag: '/src/assets/flags/lt.svg' },
-      { country: 'Malasia', flag: '/src/assets/flags/my.svg' },
-      { country: 'Malí', flag: '/src/assets/flags/ml.svg' },
-      { country: 'Países Bajos', flag: '/src/assets/flags/nl.svg' },
-      { country: 'Nueva Zelanda', flag: '/src/assets/flags/nz.svg' },
-      { country: 'Nigeria', flag: '/src/assets/flags/ng.svg' },
-      { country: 'Macedonia del Norte', flag: '/src/assets/flags/mk.svg' },
-      { country: 'Noruega', flag: '/src/assets/flags/no.svg' },
-      { country: 'Omán', flag: '/src/assets/flags/om.svg' },
-      { country: 'Filipinas', flag: '/src/assets/flags/ph.svg' },
-      { country: 'Polonia', flag: '/src/assets/flags/pl.svg' },
-      { country: 'Portugal', flag: '/src/assets/flags/pt.svg' },
-      { country: 'Catar', flag: '/src/assets/flags/qa.svg' },
-      { country: 'Rumanía', flag: '/src/assets/flags/ro.svg' },
-      { country: 'Arabia Saudita', flag: '/src/assets/flags/sa.svg' },
-      { country: 'Singapur', flag: '/src/assets/flags/sg.svg' },
-      { country: 'Eslovaquia', flag: '/src/assets/flags/sk.svg' },
-      { country: 'Eslovenia', flag: '/src/assets/flags/si.svg' },
-      { country: 'Somalia', flag: '/src/assets/flags/so.svg' },
-      { country: 'Sudáfrica', flag: '/src/assets/flags/za.svg' },
-      { country: 'Corea del Sur', flag: '/src/assets/flags/kr.svg' },
-      { country: 'España', flag: '/src/assets/flags/es.svg' },
-      { country: 'Suecia', flag: '/src/assets/flags/se.svg' },
-      { country: 'Tanzania', flag: '/src/assets/flags/tz.svg' },
-      { country: 'Tailandia', flag: '/src/assets/flags/th.svg' },
-      { country: 'Turquía', flag: '/src/assets/flags/tr.svg' },
-      { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' },
-      { country: 'Emiratos Árabes Unidos', flag: '/src/assets/flags/ae.svg' },
-      { country: 'Reino Unido', flag: '/src/assets/flags/gb.svg' },
-      { country: 'Estados Unidos', flag: '/src/assets/flags/us.svg' },
-      { country: 'Uzbekistán', flag: '/src/assets/flags/uz.svg' },
-      { country: 'Yemen', flag: '/src/assets/flags/ye.svg' },
-      { country: 'Zambia', flag: '/src/assets/flags/zm.svg' }
+      { country: 'Afganistán', flag: afFlag },
+      { country: 'Albania', flag: alFlag },
+      { country: 'Angola', flag: aoFlag },
+      { country: 'Argentina', flag: arFlag },
+      { country: 'Australia', flag: auFlag },
+      { country: 'Austria', flag: atFlag },
+      { country: 'Baréin', flag: bhFlag },
+      { country: 'Bangladés', flag: bdFlag },
+      { country: 'Bélgica', flag: beFlag },
+      { country: 'Botsuana', flag: bwFlag },
+      { country: 'Bulgaria', flag: bgFlag },
+      { country: 'Canadá', flag: caFlag },
+      { country: 'Chile', flag: clFlag },
+      { country: 'Colombia', flag: coFlag },
+      { country: 'Dinamarca', flag: dkFlag },
+      { country: 'Estonia', flag: eeFlag },
+      { country: 'Fiyi', flag: fjFlag },
+      { country: 'Francia', flag: frFlag },
+      { country: 'Georgia', flag: geFlag },
+      { country: 'Alemania', flag: deFlag },
+      { country: 'Grecia', flag: grFlag },
+      { country: 'Hungría', flag: huFlag },
+      { country: 'Indonesia', flag: idFlag },
+      { country: 'Irak', flag: iqFlag },
+      { country: 'Irlanda', flag: ieFlag },
+      { country: 'Italia', flag: itFlag },
+      { country: 'Jordania', flag: joFlag },
+      { country: 'Kazajistán', flag: kzFlag },
+      { country: 'Kenia', flag: keFlag },
+      { country: 'Kuwait', flag: kwFlag },
+      { country: 'Letonia', flag: lvFlag },
+      { country: 'Lituania', flag: ltFlag },
+      { country: 'Malasia', flag: myFlag },
+      { country: 'Malí', flag: mlFlag },
+      { country: 'Países Bajos', flag: nlFlag },
+      { country: 'Nueva Zelanda', flag: nzFlag },
+      { country: 'Nigeria', flag: ngFlag },
+      { country: 'Macedonia del Norte', flag: mkFlag },
+      { country: 'Noruega', flag: noFlag },
+      { country: 'Omán', flag: omFlag },
+      { country: 'Filipinas', flag: phFlag },
+      { country: 'Polonia', flag: plFlag },
+      { country: 'Portugal', flag: ptFlag },
+      { country: 'Catar', flag: qaFlag },
+      { country: 'Rumanía', flag: roFlag },
+      { country: 'Arabia Saudita', flag: saFlag },
+      { country: 'Singapur', flag: sgFlag },
+      { country: 'Eslovaquia', flag: skFlag },
+      { country: 'Eslovenia', flag: siFlag },
+      { country: 'Somalia', flag: soFlag },
+      { country: 'Sudáfrica', flag: zaFlag },
+      { country: 'Corea del Sur', flag: krFlag },
+      { country: 'España', flag: esFlag },
+      { country: 'Suecia', flag: seFlag },
+      { country: 'Tanzania', flag: tzFlag },
+      { country: 'Tailandia', flag: thFlag },
+      { country: 'Turquía', flag: trFlag },
+      { country: 'Ucrania', flag: uaFlag },
+      { country: 'Emiratos Árabes Unidos', flag: aeFlag },
+      { country: 'Reino Unido', flag: gbFlag },
+      { country: 'Estados Unidos', flag: usFlag },
+      { country: 'Uzbekistán', flag: uzFlag },
+      { country: 'Yemen', flag: yeFlag },
+      { country: 'Zambia', flag: zmFlag }
     ],
     former: [
-      { country: 'República Islámica de Afganistán', flag: '/src/assets/flags/af.svg' },
-      { country: 'China', flag: '/src/assets/flags/cn.svg' },
+      { country: 'República Islámica de Afganistán', flag: afFlag },
+      { country: 'China', flag: cnFlag }
     ]
   },
   {
@@ -100,57 +223,56 @@ const allCamos = [
     developer: 'Ejército de los Estados Unidos',
     terrain: ['bosque'],
     users: [
-      { country: 'Afganistán', flag: '/src/assets/flags/af.svg' },
-      { country: 'Argentina', flag: '/src/assets/flags/ar.svg' },
-      { country: 'Armenia', flag: '/src/assets/flags/am.svg' },
-      { country: 'Azerbaiyán', flag: '/src/assets/flags/az.svg' },
-      { country: 'Bangladés', flag: '/src/assets/flags/bd.svg' },
-      { country: 'Bután', flag: '/src/assets/flags/bt.svg' },
-      { country: 'Bolivia', flag: '/src/assets/flags/bo.svg' },
-      { country: 'Bosnia y Herzegovina', flag: '/src/assets/flags/ba.svg' },
-      { country: 'República Srpska', flag: '/src/assets/flags/ba.svg' },
-      { country: 'Camboya', flag: '/src/assets/flags/kh.svg' },
-      { country: 'Chad', flag: '/src/assets/flags/td.svg' },
-      { country: 'Chile', flag: '/src/assets/flags/cl.svg' },
-      { country: 'Colombia', flag: '/src/assets/flags/co.svg' },
-      { country: 'FARC', flag: '/src/assets/flags/co.svg' },
-      { country: 'Congo-Brazzaville', flag: '/src/assets/flags/cg.svg' },
-      { country: 'Congo-Kinshasa', flag: '/src/assets/flags/cd.svg' },
-      { country: 'Costa de Marfil', flag: '/src/assets/flags/ci.svg' },
-      { country: 'Croacia', flag: '/src/assets/flags/hr.svg' },
-      { country: 'Chipre', flag: '/src/assets/flags/cy.svg' },
-      { country: 'Egipto', flag: '/src/assets/flags/eg.svg' },
-      { country: 'El Salvador', flag: '/src/assets/flags/sv.svg' },
-      { country: 'Estonia', flag: '/src/assets/flags/ee.svg' },
-      { country: 'Fiyi', flag: '/src/assets/flags/fj.svg' },
-      { country: 'Gambia', flag: '/src/assets/flags/gm.svg' },
-      { country: 'Grecia', flag: '/src/assets/flags/gr.svg' },
-      { country: 'Guatemala', flag: '/src/assets/flags/gt.svg' },
-      { country: 'Haití', flag: '/src/assets/flags/ht.svg' },
-      { country: 'Honduras', flag: '/src/assets/flags/hn.svg' },
-      { country: 'Hong Kong', flag: '/src/assets/flags/hk.svg' },
-      { country: 'Israel', flag: '/src/assets/flags/il.svg' },
-      { country: 'Kirguistán', flag: '/src/assets/flags/kg.svg' },
-      { country: 'Kuwait', flag: '/src/assets/flags/kw.svg' },
-      { country: 'Lituania', flag: '/src/assets/flags/lt.svg' },
-      { country: 'Luxemburgo', flag: '/src/assets/flags/lu.svg' },
-      { country: 'Malasia', flag: '/src/assets/flags/my.svg' },
-      { country: 'México', flag: '/src/assets/flags/mx.svg' },
-      { country: 'Moldavia', flag: '/src/assets/flags/md.svg' },
-      { country: 'Montenegro', flag: '/src/assets/flags/me.svg' },
-      { country: 'Corea del Norte', flag: '/src/assets/flags/kp.svg' },
-      { country: 'Filipinas', flag: '/src/assets/flags/ph.svg' },
-      { country: 'Rusia', flag: '/src/assets/flags/ru.svg' },
-      { country: 'San Cristóbal y Nieves', flag: '/src/assets/flags/kn.svg' },
-      { country: 'Arabia Saudita', flag: '/src/assets/flags/sa.svg' },
-      { country: 'Somalia', flag: '/src/assets/flags/so.svg' },
-      { country: 'Corea del Sur', flag: '/src/assets/flags/kr.svg' },
-      { country: 'Sri Lanka', flag: '/src/assets/flags/lk.svg' },
-      { country: 'Tonga', flag: '/src/assets/flags/to.svg' },
-      { country: 'Turquía', flag: '/src/assets/flags/tr.svg' },
-      { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' },
-      { country: 'Estados Unidos', flag: '/src/assets/flags/us.svg' },
-      { country: 'Vietnam', flag: '/src/assets/flags/vn.svg' }
+      { country: 'Afganistán', flag: afFlag },
+      { country: 'Argentina', flag: arFlag },
+      { country: 'Armenia', flag: amFlag },
+      { country: 'Azerbaiyán', flag: azFlag },
+      { country: 'Bangladés', flag: bdFlag },
+      { country: 'Bután', flag: btFlag },
+      { country: 'Bolivia', flag: boFlag },
+      { country: 'Bosnia y Herzegovina', flag: baFlag },
+      { country: 'República Srpska', flag: baFlag },
+      { country: 'Camboya', flag: khFlag },
+      { country: 'Chad', flag: tdFlag },
+      { country: 'Chile', flag: clFlag },
+      { country: 'Colombia', flag: coFlag },
+      { country: 'Congo-Brazzaville', flag: cgFlag },
+      { country: 'Congo-Kinshasa', flag: cdFlag },
+      { country: 'Costa de Marfil', flag: ciFlag },
+      { country: 'Croacia', flag: hrFlag },
+      { country: 'Chipre', flag: cyFlag },
+      { country: 'Egipto', flag: egFlag },
+      { country: 'El Salvador', flag: svFlag },
+      { country: 'Estonia', flag: eeFlag },
+      { country: 'Fiyi', flag: fjFlag },
+      { country: 'Gambia', flag: gmFlag },
+      { country: 'Grecia', flag: grFlag },
+      { country: 'Guatemala', flag: gtFlag },
+      { country: 'Haití', flag: htFlag },
+      { country: 'Honduras', flag: hnFlag },
+      { country: 'Hong Kong', flag: hkFlag },
+      { country: 'Israel', flag: ilFlag },
+      { country: 'Kirguistán', flag: kgFlag },
+      { country: 'Kuwait', flag: kwFlag },
+      { country: 'Lituania', flag: ltFlag },
+      { country: 'Luxemburgo', flag: luFlag },
+      { country: 'Malasia', flag: myFlag },
+      { country: 'México', flag: mxFlag },
+      { country: 'Moldavia', flag: mdFlag },
+      { country: 'Montenegro', flag: meFlag },
+      { country: 'Corea del Norte', flag: kpFlag },
+      { country: 'Filipinas', flag: phFlag },
+      { country: 'Rusia', flag: ruFlag },
+      { country: 'San Cristóbal y Nieves', flag: knFlag },
+      { country: 'Arabia Saudita', flag: saFlag },
+      { country: 'Somalia', flag: soFlag },
+      { country: 'Corea del Sur', flag: krFlag },
+      { country: 'Sri Lanka', flag: lkFlag },
+      { country: 'Tonga', flag: toFlag },
+      { country: 'Turquía', flag: trFlag },
+      { country: 'Ucrania', flag: uaFlag },
+      { country: 'Estados Unidos', flag: usFlag },
+      { country: 'Vietnam', flag: vnFlag }
     ]
   },
   {
@@ -161,14 +283,14 @@ const allCamos = [
     developer: 'Ejército Británico & Crye Precision',
     terrain: ['bosque', 'desierto', 'montaña'],
     users: [
-      { country: 'Baréin', flag: '/src/assets/flags/bh.svg' },
-      { country: 'Dinamarca', flag: '/src/assets/flags/dk.svg' },
-      { country: 'Malta', flag: '/src/assets/flags/mt.svg' },
-      { country: 'Nueva Zelanda', flag: '/src/assets/flags/nz.svg' },
-      { country: 'Tonga', flag: '/src/assets/flags/to.svg' },
-      { country: 'Reino Unido', flag: '/src/assets/flags/gb.svg' },
-      { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' },
-      { country: 'Pakistán', flag: '/src/assets/flags/pk.svg' }
+      { country: 'Baréin', flag: bhFlag },
+      { country: 'Dinamarca', flag: dkFlag },
+      { country: 'Malta', flag: mtFlag },
+      { country: 'Nueva Zelanda', flag: nzFlag },
+      { country: 'Tonga', flag: toFlag },
+      { country: 'Reino Unido', flag: gbFlag },
+      { country: 'Ucrania', flag: uaFlag },
+      { country: 'Pakistán', flag: pkFlag }
     ],
     former: []
   },
@@ -180,13 +302,13 @@ const allCamos = [
     developer: 'Ejército Ruso',
     terrain: ['bosque', 'montaña'],
     users: [
-      { country: 'Bielorrusia', flag: '/src/assets/flags/by.svg' },
-      { country: 'Belice', flag: '/src/assets/flags/bz.svg' },
-      { country: 'Rusia', flag: '/src/assets/flags/ru.svg' },
-      { country: 'Tayikistán', flag: '/src/assets/flags/tj.svg' }
+      { country: 'Bielorrusia', flag: byFlag },
+      { country: 'Belice', flag: bzFlag },
+      { country: 'Rusia', flag: ruFlag },
+      { country: 'Tayikistán', flag: tjFlag }
     ],
     former: [
-      { country: 'Siria', flag: '/src/assets/flags/sy.svg' }
+      { country: 'Siria', flag: syFlag }
     ]
   },
   {
@@ -197,30 +319,30 @@ const allCamos = [
     developer: 'Ejército de los Estados Unidos',
     terrain: ['urbano', 'desierto'],
     users: [
-      { country: 'Afganistán', flag: '/src/assets/flags/af.svg' },
-      { country: 'Argentina', flag: '/src/assets/flags/ar.svg' },
-      { country: 'Azerbaiyán', flag: '/src/assets/flags/az.svg' },
-      { country: 'Bolivia', flag: '/src/assets/flags/bo.svg' },
-      { country: 'Bosnia y Herzegovina', flag: '/src/assets/flags/ba.svg' },
-      { country: 'Chad', flag: '/src/assets/flags/td.svg' },
-      { country: 'Chile', flag: '/src/assets/flags/cl.svg' },
-      { country: 'Chipre', flag: '/src/assets/flags/cy.svg' },
-      { country: 'Hungría', flag: '/src/assets/flags/hu.svg' },
-      { country: 'India', flag: '/src/assets/flags/in.svg' },
-      { country: 'Irán', flag: '/src/assets/flags/ir.svg' },
-      { country: 'Kazajistán', flag: '/src/assets/flags/kz.svg' },
-      { country: 'Líbano', flag: '/src/assets/flags/lb.svg' },
-      { country: 'Malasia', flag: '/src/assets/flags/my.svg' },
-      { country: 'México', flag: '/src/assets/flags/mx.svg' },
-      { country: 'Montenegro', flag: '/src/assets/flags/me.svg' },
-      { country: 'Moldavia', flag: '/src/assets/flags/md.svg' },
-      { country: 'Macedonia del Norte', flag: '/src/assets/flags/mk.svg' },
-      { country: 'Paraguay', flag: '/src/assets/flags/py.svg' },
-      { country: 'Perú', flag: '/src/assets/flags/pe.svg' },
-      { country: 'Arabia Saudita', flag: '/src/assets/flags/sa.svg' },
-      { country: 'Serbia', flag: '/src/assets/flags/rs.svg' },
-      { country: 'Tayikistán', flag: '/src/assets/flags/tj.svg' },
-      { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' }
+      { country: 'Afganistán', flag: afFlag },
+      { country: 'Argentina', flag: arFlag },
+      { country: 'Azerbaiyán', flag: azFlag },
+      { country: 'Bolivia', flag: boFlag },
+      { country: 'Bosnia y Herzegovina', flag: baFlag },
+      { country: 'Chad', flag: tdFlag },
+      { country: 'Chile', flag: clFlag },
+      { country: 'Chipre', flag: cyFlag },
+      { country: 'Hungría', flag: huFlag },
+      { country: 'India', flag: inFlag },
+      { country: 'Irán', flag: irFlag },
+      { country: 'Kazajistán', flag: kzFlag },
+      { country: 'Líbano', flag: lbFlag },
+      { country: 'Malasia', flag: myFlag },
+      { country: 'México', flag: mxFlag },
+      { country: 'Montenegro', flag: meFlag },
+      { country: 'Moldavia', flag: mdFlag },
+      { country: 'Macedonia del Norte', flag: mkFlag },
+      { country: 'Paraguay', flag: pyFlag },
+      { country: 'Perú', flag: peFlag },
+      { country: 'Arabia Saudita', flag: saFlag },
+      { country: 'Serbia', flag: rsFlag },
+      { country: 'Tayikistán', flag: tjFlag },
+      { country: 'Ucrania', flag: uaFlag }
     ],
     former: []
   },
@@ -232,11 +354,11 @@ const allCamos = [
     developer: 'Crye Precision & Natick Labs',
     terrain: ['bosque', 'desierto', 'montaña'],
     users: [
-      { country: 'Australia', flag: '/src/assets/flags/au.svg' },
-      { country: 'Líbano', flag: '/src/assets/flags/lb.svg' },
-      { country: 'Corea del Sur', flag: '/src/assets/flags/kr.svg' },
-      { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' },
-      { country: 'Estados Unidos', flag: '/src/assets/flags/us.svg' }
+      { country: 'Australia', flag: auFlag },
+      { country: 'Líbano', flag: lbFlag },
+      { country: 'Corea del Sur', flag: krFlag },
+      { country: 'Ucrania', flag: uaFlag },
+      { country: 'Estados Unidos', flag: usFlag }
     ],
     former: []
   },
@@ -248,29 +370,29 @@ const allCamos = [
     developer: 'Cuerpo de Marines de los Estados Unidos',
     terrain: ['bosque', 'urbano'],
     users: [
-    { country: 'Argentina', flag: '/src/assets/flags/ar.svg' },
-    { country: 'Bahamas', flag: '/src/assets/flags/bs.svg' },
-    { country: 'Bolivia', flag: '/src/assets/flags/bo.svg' },
-    { country: 'Bosnia y Herzegovina', flag: '/src/assets/flags/ba.svg' },
-    { country: 'Brasil', flag: '/src/assets/flags/br.svg' },
-    { country: 'Chad', flag: '/src/assets/flags/td.svg' },
-    { country: 'Chile', flag: '/src/assets/flags/cl.svg' },
-    { country: 'Chipre', flag: '/src/assets/flags/cy.svg' },
-    { country: 'Ecuador', flag: '/src/assets/flags/ec.svg' },
-    { country: 'Georgia', flag: '/src/assets/flags/ge.svg' },
-    { country: 'Haití', flag: '/src/assets/flags/ht.svg' },
-    { country: 'India', flag: '/src/assets/flags/in.svg' },
-    { country: 'Hungría', flag: '/src/assets/flags/hu.svg' },
-    { country: 'Irán', flag: '/src/assets/flags/ir.svg' },
-    { country: 'Líbano', flag: '/src/assets/flags/lb.svg' },
-    { country: 'Mongolia', flag: '/src/assets/flags/mn.svg' },
-    { country: 'Myanmar', flag: '/src/assets/flags/mm.svg' },
-    { country: 'Macedonia del Norte', flag: '/src/assets/flags/mk.svg' },
-    { country: 'Santa Lucía', flag: '/src/assets/flags/lc.svg' },
-    { country: 'Arabia Saudita', flag: '/src/assets/flags/sa.svg' },
-    { country: 'Serbia', flag: '/src/assets/flags/rs.svg' },
-    { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' },
-    { country: 'Estados Unidos', flag: '/src/assets/flags/us.svg' }
+    { country: 'Argentina', flag: arFlag },
+    { country: 'Bahamas', flag: bsFlag },
+    { country: 'Bolivia', flag: boFlag },
+    { country: 'Bosnia y Herzegovina', flag: baFlag },
+    { country: 'Brasil', flag: brFlag },
+    { country: 'Chad', flag: tdFlag },
+    { country: 'Chile', flag: clFlag },
+    { country: 'Chipre', flag: cyFlag },
+    { country: 'Ecuador', flag: ecFlag },
+    { country: 'Georgia', flag: geFlag },
+    { country: 'Haití', flag: htFlag },
+    { country: 'India', flag: inFlag },
+    { country: 'Hungría', flag: huFlag },
+    { country: 'Irán', flag: irFlag },
+    { country: 'Líbano', flag: lbFlag },
+    { country: 'Mongolia', flag: mnFlag },
+    { country: 'Myanmar', flag: mmFlag },
+    { country: 'Macedonia del Norte', flag: mkFlag },
+    { country: 'Santa Lucía', flag: lcFlag },
+    { country: 'Arabia Saudita', flag: saFlag },
+    { country: 'Serbia', flag: rsFlag },
+    { country: 'Ucrania', flag: uaFlag },
+    { country: 'Estados Unidos', flag: usFlag }
   ],
     former: []
   },
@@ -282,16 +404,16 @@ const allCamos = [
     developer: 'Fuerzas Armadas Francesas',
     terrain: ['urbano', 'desierto', 'bosque', 'montaña'],
     users: [
-    { country: 'Austria', flag: '/src/assets/flags/at.svg' },
-    { country: 'Cabo Verde', flag: '/src/assets/flags/cv.svg' },
-    { country: 'República Centroafricana', flag: '/src/assets/flags/cf.svg' },
-    { country: 'Comoras', flag: '/src/assets/flags/km.svg' },
-    { country: 'Francia', flag: '/src/assets/flags/fr.svg' },
-    { country: 'India', flag: '/src/assets/flags/in.svg' },
-    { country: 'Rusia', flag: '/src/assets/flags/ru.svg' },
-    { country: 'Catar', flag: '/src/assets/flags/qa.svg' },
-    { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' },
-    { country: 'Emiratos Árabes Unidos', flag: '/src/assets/flags/ae.svg' }
+    { country: 'Austria', flag: atFlag },
+    { country: 'Cabo Verde', flag: cvFlag },
+    { country: 'República Centroafricana', flag: cfFlag },
+    { country: 'Comoras', flag: kmFlag },
+    { country: 'Francia', flag: frFlag },
+    { country: 'India', flag: inFlag },
+    { country: 'Rusia', flag: ruFlag },
+    { country: 'Catar', flag: qaFlag },
+    { country: 'Ucrania', flag: uaFlag },
+    { country: 'Emiratos Árabes Unidos', flag: aeFlag }
   ],
     former: []
   },
@@ -303,20 +425,20 @@ const allCamos = [
     developer: 'Ejército de los Estados Unidos',
     terrain: ['desierto'],
     users: [
-    { country: 'Argentina', flag: '/src/assets/flags/ar.svg', type: 'current' },
-    { country: 'Azerbaiyán', flag: '/src/assets/flags/az.svg', type: 'current' },
-    { country: 'Bosnia y Herzegovina', flag: '/src/assets/flags/ba.svg', type: 'current' },
-    { country: 'Georgia', flag: '/src/assets/flags/ge.svg', type: 'current' },
-    { country: 'Israel', flag: '/src/assets/flags/il.svg', type: 'current' },
-    { country: 'Arabia Saudita', flag: '/src/assets/flags/sa.svg', type: 'current' }
+    { country: 'Argentina', flag: arFlag },
+    { country: 'Azerbaiyán', flag: azFlag },
+    { country: 'Bosnia y Herzegovina', flag: baFlag },
+    { country: 'Georgia', flag: geFlag },
+    { country: 'Israel', flag: ilFlag },
+    { country: 'Arabia Saudita', flag: saFlag }
     ],
     former: [
-    { country: 'Afganistán', flag: '/src/assets/flags/af.svg', type: 'former' },
-    { country: 'Croacia', flag: '/src/assets/flags/hr.svg', type: 'former' },
-    { country: 'Países Bajos', flag: '/src/assets/flags/nl.svg', type: 'former' },
-    { country: 'Macedonia del Norte', flag: '/src/assets/flags/mk.svg', type: 'former' },
-    { country: 'Eslovenia', flag: '/src/assets/flags/si.svg', type: 'former' },
-    { country: 'Estados Unidos', flag: '/src/assets/flags/us.svg', type: 'former' }
+    { country: 'Afganistán', flag: afFlag},
+    { country: 'Croacia', flag: hrFlag},
+    { country: 'Países Bajos', flag: nlFlag},
+    { country: 'Macedonia del Norte', flag: mkFlag},
+    { country: 'Eslovenia', flag: siFlag},
+    { country: 'Estados Unidos', flag: usFlag}
   ]
   },
   {
@@ -327,7 +449,7 @@ const allCamos = [
     developer: 'Ejército de Ucrania',
     terrain: ['urbano', 'rural'],
     users: [
-      { country: 'Ucrania', flag: '/src/assets/flags/ua.svg' }
+      { country: 'Ucrania', flag: uaFlag }
     ],
     former: []
   }
