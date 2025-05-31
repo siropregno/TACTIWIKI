@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/TACTIWIKI/', // <-- Cambia esto por el nombre de tu repo
+  base: '/', // <-- Cambia esto por el nombre de tu repo
   plugins: [react()],
   resolve: {
     alias: {
