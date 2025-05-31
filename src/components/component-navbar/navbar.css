@@ -74,3 +74,54 @@
     filter: brightness(1.2);
     transition: height 0.2s ease-in-out;
 }
+
+/* Responsive styles for cellphones */
+@media (max-width: 600px) {
+  .nav-container {
+    height: 56px;
+    min-height: 56px;
+  }
+
+  .nav-content {
+    padding: 0px 12px;
+    height: 56px;
+  }
+
+  .logo-container {
+    height: 56px;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .nav-content ul {
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100vw;
+    background: var(--blk);
+    display: none; /* You can toggle this with a hamburger menu in JS */
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+  }
+
+  .nav-content ul.show {
+    display: flex;
+  }
+
+  .nav-content ul li {
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  .nav-content ul li a {
+    height: auto;
+    font-size: 18px;
+    padding: 12px 0;
+    width: 100vw;
+    display: block;
+  }
+}

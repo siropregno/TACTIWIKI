@@ -105,3 +105,38 @@
   visibility: visible;
   opacity: 1;
 }
+
+/* Responsive styles for cellphones */
+@media (max-width: 600px) {
+  .camo-card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding: 16px;
+    margin: 18px 0;
+  }
+
+  .camo-image {
+    width: 100%;
+    height: 140px;
+    margin-right: 0;
+    margin-bottom: 16px;
+    border-radius: 6px;
+  }
+
+  .camo-details {
+    width: 100%;
+  }
+
+  .user-flag-div {
+    max-width: 100%;
+    padding: 0px 8px 8px 8px;
+    font-size: 14px;
+  }
+
+  .toggle-flags-btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 8px 0;
+  }
+}

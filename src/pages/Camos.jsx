@@ -233,7 +233,7 @@ const allCamos = [
   {
     image: m81WoodlandImg,
     name: "M81 WOODLAND",
-    year: 1981, // <-- Agrega el año de creación
+    year: 1981,
     description: "Un patrón de camuflaje clásico que se ha utilizado durante décadas, efectivo en áreas boscosas.",
     developer: 'Ejército de los Estados Unidos',
     terrain: ['bosque'],
@@ -307,7 +307,7 @@ const allCamos = [
   {
     image: mtpImg,
     name: "MTP (PATRÓN MULTITERRENO)",
-    year: 2010, // <-- Agrega el año de creación
+    year: 2010,
     description: "Un patrón de camuflaje moderno utilizado por las Fuerzas Armadas Británicas, diseñado para múltiples terrenos. Se adapta bien a diversos entornos, desde desiertos hasta bosques. Su combinación única de colores ayuda a los soldados a permanecer ocultos en paisajes variados.",
     developer: 'Ejército Británico & Crye Precision',
     terrain: ['bosque', 'desierto', 'montaña'],
@@ -448,7 +448,7 @@ const allCamos = [
   },
   {
     image: dcuImg,
-    name: "DCU (DESERT CAMOUFLAGE UNIFORM)",
+    name: "DCU 3 COLORES (DESERT CAMOUFLAGE UNIFORM)",
     year: 1989,
     description: "Un patrón de camuflaje utilizado por las Fuerzas Armadas de los Estados Unidos, diseñado para entornos desérticos. Se caracteriza por su combinación de colores arena y marrón, lo que ayuda a los soldados a mezclarse con el paisaje árido.",
     developer: 'Ejército de los Estados Unidos',
@@ -543,6 +543,18 @@ const allCamos = [
       { country: 'Uzbekistán', flag: uzFlag },
       { country: 'Yemen', flag: yeFlag }
     ]
+  },
+  {
+    image: dcu2Img,
+    name: "DCU 6 COLORES (CAMUFLAJE DE CHISPAS, DBDU)",
+    year: 1981,
+    description: "Un patrón de camuflaje utilizado por las Fuerzas Armadas de los Estados Unidos, diseñado para entornos desérticos. Se caracteriza por su combinación de colores arena y marrón, lo que ayuda a los soldados a mezclarse con el paisaje árido.",
+    developer: 'Ejército de los Estados Unidos',
+    terrain: ['desierto'],
+    users: [
+      { country: 'Estados Unidos', flag: usFlag }
+    ],
+    former: []
   }
 ];
 
@@ -564,10 +576,10 @@ const allTerrains = Array.from(
 const Camos = () => {
   const [selectedCountry, setSelectedCountry] = useState('');
   const [selectedTerrain, setSelectedTerrain] = useState('');
-  // Un solo filtro combinado para orden
   const [order, setOrder] = useState('popularity-desc');
+  const [search, setSearch] = useState(''); // Nuevo estado para la búsqueda
 
-  // Filtrar camuflajes por país y terreno seleccionado (incluyendo former)
+  // Filtrar camuflajes por país, terreno y búsqueda (incluyendo former)
   const filteredCamos = allCamos.filter(camo => {
     const countryMatch = selectedCountry
       ? (camo.users && camo.users.some(user => user.country === selectedCountry)) ||
@@ -576,7 +588,13 @@ const Camos = () => {
     const terrainMatch = selectedTerrain
       ? camo.terrain.includes(selectedTerrain)
       : true;
-    return countryMatch && terrainMatch;
+    const searchMatch = search
+      ? (
+          camo.name.toLowerCase().includes(search.toLowerCase()) ||
+          (camo.description && camo.description.toLowerCase().includes(search.toLowerCase()))
+        )
+      : true;
+    return countryMatch && terrainMatch && searchMatch;
   });
 
   // Ordenar según el filtro combinado
@@ -605,15 +623,48 @@ const Camos = () => {
         <p style={{ color: 'var(--wht)', maxWidth: '800px', textAlign: 'center' }}>
           Los camuflajes son patrones de diseño utilizados en uniformes militares y tácticos para ayudar a los soldados a mezclarse con su entorno. Estos patrones están diseñados para romper la silueta humana y reducir la visibilidad en diferentes terrenos, como bosques, desiertos o áreas urbanas.
         </p>
-        <div style={{ margin: '20px 0', display: 'flex', gap: '16px', flexWrap: 'wrap', background: 'var(--gry2)', padding: '16px 32px', borderRadius: '8px' }}>
-          <div>
+        {/* Barra de búsqueda */}
+        <div style={{ margin: '12px 0', width: '100%', maxWidth: 400, display: 'flex', justifyContent: 'center' }}>
+          <input
+            type="text"
+            placeholder="Buscar camuflaje..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            style={{
+              width: '80%',
+              padding: '8px 12px',
+              borderRadius: 6,
+              border: '1px solid var(--gry2)',
+              fontSize: 16,
+              background: 'var(--gry2)',
+              color: 'var(--wht)',
+              fontFamily: 'var(--texto)'
+            }}
+          />
+        </div>
+        <div
+          className="camo-filter-bar"
+          style={{
+            margin: '20px 0',
+            display: 'flex',
+            gap: '16px',
+            flexWrap: 'wrap',
+            background: 'var(--gry2)',
+            padding: '16px 32px',
+            borderRadius: '8px',
+            width: '100%',
+            maxWidth: 900,
+            boxSizing: 'border-box'
+          }}
+        >
+          <div style={{ minWidth: 140, flex: 1 }}>
             <label style={{ color: 'var(--wht)', fontFamily: 'var(--texto)', marginRight: 8 }}>
               Usuario:&nbsp;
             </label>
             <select
               value={selectedCountry}
               onChange={e => setSelectedCountry(e.target.value)}
-              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)' }}
+              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%' }}
             >
               <option value="">Todos</option>
               {allCountries.map(country => (
@@ -621,14 +672,14 @@ const Camos = () => {
               ))}
             </select>
           </div>
-          <div>
+          <div style={{ minWidth: 140, flex: 1 }}>
             <label style={{ color: 'var(--wht)', fontFamily: 'var(--texto)', marginRight: 8 }}>
               Terreno:&nbsp;
             </label>
             <select
               value={selectedTerrain}
               onChange={e => setSelectedTerrain(e.target.value)}
-              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)' }}
+              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%' }}
             >
               <option value="">Todos</option>
               {allTerrains.map(terrain => (
@@ -636,14 +687,14 @@ const Camos = () => {
               ))}
             </select>
           </div>
-          <div>
+          <div style={{ minWidth: 180, flex: 1 }}>
             <label style={{ color: 'var(--wht)', fontFamily: 'var(--texto)', marginRight: 8 }}>
               Ordenar por:&nbsp;
             </label>
             <select
               value={order}
               onChange={e => setOrder(e.target.value)}
-              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)' }}
+              style={{ background: 'var(--yel)', padding: '4px 8px', borderRadius: 4, border: '0px solid var(--wht)', width: '100%' }}
             >
               <option value="popularity-desc">Más popular primero</option>
               <option value="popularity-asc">Menos popular primero</option>
