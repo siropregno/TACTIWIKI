@@ -7,7 +7,9 @@ const terrainLabels = {
   desierto: 'Desierto',
   urbano: 'Urbano',
   montaña: 'Montaña',
-  nieve: 'Nieve'
+  nieve: 'Nieve',
+  rural: 'Rural',
+  jungla: 'Jungla'
 };
 
 const CamoCard = ({ image, name, description, terrain, year, developer, users, former }) => {
@@ -52,7 +54,7 @@ const CamoCard = ({ image, name, description, terrain, year, developer, users, f
                     alt={user.country}
                     className='flag'
                   />
-                  <span className="flag-tooltip">{user.country}</span>
+                  <span className="flag-tooltip">{user.country}{user.force ? ` - ${user.force}` : ''}</span>
                 </span>
               ))}
               {former && former.length > 0 && (
@@ -61,7 +63,7 @@ const CamoCard = ({ image, name, description, terrain, year, developer, users, f
                   {former.map(former => (
                     <span key={former.country} className="flag-hover-container">
                       <img src={former.flag} alt={former.country} className='flag'/>
-                      <span className="flag-tooltip">{former.country}</span>
+                      <span className="flag-tooltip">{former.country}{former.force ? ` - ${former.force}` : ''}</span>
                     </span>
                   ))}
                 </>
